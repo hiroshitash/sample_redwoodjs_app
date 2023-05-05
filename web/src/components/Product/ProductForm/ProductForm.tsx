@@ -186,24 +186,6 @@ const ProductForm = (props: ProductFormProps) => {
 
         <FieldError name="image" className="rw-field-error" />
 
-        <Label
-          name="quantity"
-          className="rw-label"
-          errorClassName="rw-label rw-label-error"
-        >
-          Quantity
-        </Label>
-
-        <NumberField
-          name="quantity"
-          defaultValue={props.product?.quantity}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
-
-        <FieldError name="quantity" className="rw-field-error" />
-
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">
             Save

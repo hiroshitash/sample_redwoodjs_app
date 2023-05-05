@@ -16,7 +16,6 @@ export const QUERY = gql`
       grade
       finish
       image
-      quantity
     }
   }
 `

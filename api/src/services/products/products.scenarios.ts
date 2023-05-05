@@ -1,4 +1,5 @@
 import type { Prisma, Product } from '@prisma/client'
+
 import type { ScenarioData } from '@redwoodjs/testing/api'
 
 export const standard = defineScenario<Prisma.ProductCreateArgs>({
@@ -13,7 +14,6 @@ export const standard = defineScenario<Prisma.ProductCreateArgs>({
         grade: 'String',
         finish: 'String',
         image: 'String',
-        quantity: 2856506,
       },
     },
     two: {
@@ -26,7 +26,6 @@ export const standard = defineScenario<Prisma.ProductCreateArgs>({
         grade: 'String',
         finish: 'String',
         image: 'String',
-        quantity: 8366039,
       },
     },
   },

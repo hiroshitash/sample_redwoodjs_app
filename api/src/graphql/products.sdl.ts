@@ -9,7 +9,6 @@ export const schema = gql`
     grade: String!
     finish: String!
     image: String!
-    quantity: Int!
   }
 
   type Query {
@@ -26,7 +25,6 @@ export const schema = gql`
     grade: String!
     finish: String!
     image: String!
-    quantity: Int!
   }
 
   input UpdateProductInput {
@@ -38,7 +36,6 @@ export const schema = gql`
     grade: String
     finish: String
     image: String
-    quantity: Int
   }
 
   type Mutation {

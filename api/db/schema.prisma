@@ -12,14 +12,21 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 // TODO: Please remove the following example:
 model Product {
-  id       Int    @id @default(autoincrement())
-  sku      String @unique
-  title    String
-  type     String
-  length   String
-  material String
-  grade    String
-  finish   String
-  image    String
-  quantity Int
+  id          Int         @id @default(autoincrement())
+  sku         String      @unique
+  inventories Inventory[]
+  title       String
+  type        String
+  length      String
+  material    String
+  grade       String
+  finish      String
+  image       String
+}
+
+model Inventory {
+  id        Int     @id @default(autoincrement())
+  product   Product @relation(fields: [productId], references: [id])
+  productId Int
+  quantity  Int
 }

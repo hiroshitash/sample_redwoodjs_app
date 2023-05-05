@@ -53,7 +53,6 @@ const ProductsList = ({ products }: FindProducts) => {
             <th>Grade</th>
             <th>Finish</th>
             <th>Image</th>
-            <th>Quantity</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -75,7 +74,6 @@ const ProductsList = ({ products }: FindProducts) => {
                   style={{ maxWidth: '50px' }}
                 />
               </td>
-              <td>{truncate(product.quantity)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

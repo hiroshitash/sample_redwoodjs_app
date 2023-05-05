@@ -39,7 +39,6 @@ describe('products', () => {
         grade: 'String',
         finish: 'String',
         image: 'String',
-        quantity: 7604949,
       },
     })
 
@@ -51,7 +50,6 @@ describe('products', () => {
     expect(result.grade).toEqual('String')
     expect(result.finish).toEqual('String')
     expect(result.image).toEqual('String')
-    expect(result.quantity).toEqual(7604949)
   })
 
   scenario('updates a product', async (scenario: StandardScenario) => {

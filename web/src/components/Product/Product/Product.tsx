@@ -90,10 +90,6 @@ const Product = ({ product }: Props) => {
                 />
               </td>
             </tr>
-            <tr>
-              <th>Quantity</th>
-              <td>{product.quantity}</td>
-            </tr>
           </tbody>
         </table>
       </div>

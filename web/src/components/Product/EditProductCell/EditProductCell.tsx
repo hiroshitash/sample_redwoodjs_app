@@ -19,7 +19,6 @@ export const QUERY = gql`
       grade
       finish
       image
-      quantity
     }
   }
 `
@@ -35,7 +34,6 @@ const UPDATE_PRODUCT_MUTATION = gql`
       grade
       finish
       image
-      quantity
     }
   }
 `
