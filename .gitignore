@@ -6,6 +6,7 @@
 dev.db*
 dist
 dist-babel
+yarn.lock
 node_modules
 yarn-error.log
 web/public/mockServiceWorker.js
