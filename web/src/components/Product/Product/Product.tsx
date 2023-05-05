@@ -82,7 +82,13 @@ const Product = ({ product }: Props) => {
             </tr>
             <tr>
               <th>Image</th>
-              <td>{product.image}</td>
+              <td>
+                <img
+                  src={product.image}
+                  alt={product.image}
+                  style={{ maxWidth: '50px' }}
+                />
+              </td>
             </tr>
             <tr>
               <th>Quantity</th>

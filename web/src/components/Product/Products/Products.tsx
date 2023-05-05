@@ -1,14 +1,14 @@
+import type {
+  DeleteProductMutationVariables,
+  FindProducts,
+} from 'types/graphql'
+
 import { Link, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { QUERY } from 'src/components/Product/ProductsCell'
 import { truncate } from 'src/lib/formatters'
-
-import type {
-  DeleteProductMutationVariables,
-  FindProducts,
-} from 'types/graphql'
 
 const DELETE_PRODUCT_MUTATION = gql`
   mutation DeleteProductMutation($id: Int!) {
@@ -68,7 +68,13 @@ const ProductsList = ({ products }: FindProducts) => {
               <td>{truncate(product.material)}</td>
               <td>{truncate(product.grade)}</td>
               <td>{truncate(product.finish)}</td>
-              <td>{truncate(product.image)}</td>
+              <td>
+                <img
+                  src={product.image}
+                  alt={truncate(product.image)}
+                  style={{ maxWidth: '50px' }}
+                />
+              </td>
               <td>{truncate(product.quantity)}</td>
               <td>
                 <nav className="rw-table-actions">

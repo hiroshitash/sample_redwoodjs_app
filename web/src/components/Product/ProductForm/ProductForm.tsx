@@ -1,3 +1,5 @@
+import type { EditProductById, UpdateProductInput } from 'types/graphql'
+
 import {
   Form,
   FormError,
@@ -7,8 +9,6 @@ import {
   NumberField,
   Submit,
 } from '@redwoodjs/forms'
-
-import type { EditProductById, UpdateProductInput } from 'types/graphql'
 import type { RWGqlError } from '@redwoodjs/forms'
 
 type FormProduct = NonNullable<EditProductById['product']>
@@ -166,7 +166,7 @@ const ProductForm = (props: ProductFormProps) => {
           className="rw-label"
           errorClassName="rw-label rw-label-error"
         >
-          Image
+          Image Url
         </Label>
 
         <TextField
@@ -174,7 +174,14 @@ const ProductForm = (props: ProductFormProps) => {
           defaultValue={props.product?.image}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
+          validation={{
+            required: true,
+            pattern: {
+              value:
+                /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/,
+              message: 'Please enter a valid url',
+            },
+          }}
         />
 
         <FieldError name="image" className="rw-field-error" />
